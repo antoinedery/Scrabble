@@ -1,0 +1,23 @@
+#title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Tahoma';
+    font-size: 2vh;
+    font-weight: 700;
+    height: 1vh;
+}
+
+#game-settings-content {
+    display: flex;
+    height: 40vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p {
+    margin: 0;
+    line-height: 125%;
+}

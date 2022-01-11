@@ -1,0 +1,67 @@
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Tahoma';
+    font-size: 2vh;
+    font-weight: 700;
+    height: 5vh;
+}
+
+.waiting-zone-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.created-games {
+    border-width: 0.2vw;
+    border-color: white;
+    border-style: solid;
+    width: 40vw;
+    overflow: hidden;
+}
+
+.each-information {
+    width: 8vw;
+    font-size: 1.65vh;
+    font-weight: 700;
+    color: white;
+    line-height: 3.5vh;
+}
+
+.randomGameButton {
+    width: 8vw;
+    font-size: 1.65vh;
+    font-weight: 700;
+    line-height: 2.5vh;
+}
+
+.created-games-information {
+    display: flex;
+    background-color: #1f2029;
+    width: 40vw;
+    height: max-content;
+    border-bottom-style: solid;
+    border-bottom-color: white;
+    border-width: 0.2vw;
+}
+
+.waiting-players {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 25vh;
+    width: 40vw;
+}
+
+.noGameFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 25vh;
+    font-size: 1.65vh;
+}

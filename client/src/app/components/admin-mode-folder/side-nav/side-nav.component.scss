@@ -1,0 +1,67 @@
+#page-container {
+    height: 100vh;
+    background-color: rgb(235, 235, 235);
+}
+
+#side-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    width: 15vw;
+    border: none;
+    background-color: #292a35;
+}
+
+#side-nav-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    height: 85vh;
+}
+
+#content-container {
+    padding: 3vh 5vw;
+}
+
+.side-nav-buttons {
+    border: none;
+    cursor: pointer;
+    width: 15vw;
+    height: 5vh;
+    margin-top: 2vh;
+    font-size: 2vh;
+    background-color: #292a35;
+    color: white;
+}
+
+.selectedPage,
+.side-nav-buttons:hover {
+    border: none;
+    background-color: rgb(235, 235, 235);
+    color: black;
+}
+
+#home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+#quit-button {
+    background-color: rgb(0, 112, 192);
+    border: 0.25vh solid black;
+    color: white;
+    border-radius: 0.75vh;
+    font-size: 1.85vh;
+    height: 5.5vh;
+    width: 17.5vh;
+    outline: none;
+    cursor: pointer;
+}
+
+#quit-button:hover {
+    background-color: rgb(0, 85, 146);
+}

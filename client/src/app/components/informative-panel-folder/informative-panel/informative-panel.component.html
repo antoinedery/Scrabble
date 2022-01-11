@@ -1,0 +1,25 @@
+<div id="side-bar-container">
+    <div id="players-panel">
+        <app-players-information [reserveRemainingLetters]="reserveRemainingLetters"></app-players-information>
+    </div>
+
+    <div id="timer-container">
+        <app-countdown-timer class="timer"></app-countdown-timer>
+    </div>
+
+    <div id="reserve-container">
+        <p id="reserve-content">Lettres dans la réserve : {{ reserveRemainingLetters }}</p>
+    </div>
+
+    <div id="winner-panel-container">
+        <app-end-game></app-end-game>
+    </div>
+
+    <div id="zoom-container">
+        <app-zoom-slider></app-zoom-slider>
+    </div>
+
+    <div id="quit-button-container">
+        <button #quitButtonContainer id="quit-button" (click)="openDialog()">Abandonner</button>
+    </div>
+</div>

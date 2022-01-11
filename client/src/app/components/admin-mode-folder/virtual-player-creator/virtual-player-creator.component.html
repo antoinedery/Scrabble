@@ -1,0 +1,22 @@
+<mat-card *ngIf="clientSocketService.id !== ''">
+    <div class="modal">
+        <div class="modal-content">
+            <div class="title-container">
+                <p class="title">Ajouter un joueur virtuel<br /></p>
+            </div>
+            <div id="upper-button-container" class="button-container">
+                <button class="card" (click)="selectBotDifficulty('Easy')" [ngClass]="beginnerSelection">Joueur débutant</button>
+                <button class="card" (click)="selectBotDifficulty('Expert')" [ngClass]="expertSelection">Joueur expert</button>
+            </div>
+            <div class="name-validator">
+                <app-name-validator [isAdminModeSelected]="true" (playerNameOutput)="assignTempPlayerName($event)"></app-name-validator>
+            </div>
+            <div class="button-container">
+                <button id="close" class="card" (click)="closeModal()">Annuler</button>
+                <button id="confirm" class="card" (click)="confirmCreation()">Confirmer</button>
+            </div>
+        </div>
+    </div>
+</mat-card>
+
+<app-offline-server-modal *ngIf="!connectedServer || clientSocketService.id === ''"></app-offline-server-modal>

@@ -1,0 +1,42 @@
+/**************************************/
+
+
+/* GAME BOARD */
+
+
+/**************************************/
+
+#canvas-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    height: 85%;
+}
+
+#canvas,
+#headerCanvas #canvas-container {
+    position: absolute;
+}
+
+#headerCanvas {
+    z-index: 0;
+    background-color: transparent;
+}
+
+#canvas {
+    z-index: 1;
+    background-color: white;
+    border: solid 1px;
+    border-color: black;
+}
+
+#previewCanvas {
+    position: absolute;
+    z-index: 2;
+}
+
+#tempContainer {
+    display: flex;
+    flex-direction: wrap;
+}

@@ -1,0 +1,123 @@
+<div id="name-container">
+    <div id="input-name-container">
+        <p class="text-container">Nom du joueur</p>
+        <div class="input-field">
+            <input
+                #inputText
+                matInput
+                autocomplete="off"
+                id="player-name-box"
+                maxlength="20"
+                placeholder="Saisir votre nom"
+                [(ngModel)]="playerName"
+                (click)="showPlayerNameCriteria()"
+                (ngModelChange)="nameValidatorService.validatePlayerName(playerName)"
+                (ngModelChange)="sendPlayerNameToParent()"
+                (ngModelChange)="showPlayerNameCriteria()"
+            />
+            <div #nameValidity id="criteria-valid-name">
+                <p *ngIf="isAdminModeSelected && virtualPlayerCreatorService.checkNameExist(playerName)" id="identical-name">
+                    ✖ Le nom est déjà existant
+                </p>
+                <p
+                    *ngIf="
+                        isMultiplayerModeSelected &&
+                        playerNameComparatorService.comparePlayerNames(playerName) &&
+                        playerName &&
+                        nameValidatorService.playerNameIsValid
+                    "
+                    id="identical-name"
+                >
+                    ✖ Le nom est identique à l'adversaire
+                </p>
+                <p *ngIf="!nameValidatorService.playerNameIsValid || !playerName" id="invalid-name" class="center-text">✖ Le nom est invalide</p>
+                <p
+                    *ngIf="
+                        nameValidatorService.playerNameIsValid &&
+                        playerName &&
+                        !virtualPlayerCreatorService.checkNameExist(playerName) &&
+                        isAdminModeSelected
+                    "
+                    id="valid-name"
+                    class="center-text"
+                >
+                    ✔ Le nom est valide
+                </p>
+                <p
+                    *ngIf="
+                        nameValidatorService.playerNameIsValid &&
+                        playerName &&
+                        !playerNameComparatorService.comparePlayerNames(playerName) &&
+                        !isAdminModeSelected
+                    "
+                    id="valid-name"
+                    class="center-text"
+                >
+                    ✔ Le nom est valide
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="text-container"></div> -->
+    <div #nameCriteria id="criteria-valid-name">
+        <!-- <p *ngIf="isAdminModeSelected && virtualPlayerCreatorService.checkNameExist(playerName)" id="identical-name">
+            ✖ Le nom est déjà existant
+        </p>
+        <p
+            *ngIf="
+                isMultiplayerModeSelected &&
+                playerNameComparatorService.comparePlayerNames(playerName) &&
+                playerName &&
+                nameValidatorService.playerNameIsValid
+            "
+            id="identical-name"
+        >
+            ✖ Le nom est identique à l'adversaire
+        </p>
+        <p *ngIf="!nameValidatorService.playerNameIsValid || !playerName" id="invalid-name" class="center-text">✖ Le nom est invalide</p>
+        <p
+            *ngIf="
+                nameValidatorService.playerNameIsValid && playerName && !virtualPlayerCreatorService.checkNameExist(playerName) && isAdminModeSelected
+            "
+            id="valid-name"
+            class="center-text"
+        >
+            ✔ Le nom est valide
+        </p>
+        <p
+            *ngIf="
+                nameValidatorService.playerNameIsValid &&
+                playerName &&
+                !playerNameComparatorService.comparePlayerNames(playerName) &&
+                !isAdminModeSelected
+            "
+            id="valid-name"
+            class="center-text"
+        >
+            ✔ Le nom est valide
+        </p> -->
+        <div *ngIf="!nameValidatorService.playerNameIsValid">
+            <p class="center-text">Le nom doit satisfaire les critères suivants :</p>
+            <p *ngIf="!nameValidatorService.playerFirstCharacterIsValid || !playerName" id="invalid-first-character" class="criteria">
+                ✖ Débuter par une lettre
+            </p>
+            <p *ngIf="nameValidatorService.playerFirstCharacterIsValid && playerName" id="valid-first-character" class="criteria">
+                ✔ Débuter par une lettre
+            </p>
+
+            <p *ngIf="!nameValidatorService.playerNameLengthIsValid || !playerName" id="invalid-length" class="criteria">
+                ✖ Contenir entre 2 et 20 caractères
+            </p>
+            <p *ngIf="nameValidatorService.playerNameLengthIsValid && playerName" id="valid-length" class="criteria">
+                ✔ Contenir entre 2 et 20 caractères
+            </p>
+
+            <p *ngIf="!nameValidatorService.playerEveryCharacterIsValid || !playerName" id="invalid-letter-number" class="criteria">
+                ✖ Contenir des lettres sans accents ou des chiffres
+            </p>
+            <p *ngIf="nameValidatorService.playerEveryCharacterIsValid && playerName" id="valid-letter-number" class="criteria">
+                ✔ Contenir des lettres sans accents ou des chiffres
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+p {
+    margin: 0;
+    font-family: 'tahoma';
+}
+
+#winner-panel-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 5vh;
+}
+
+#winner-panel {
+    border: 0.1vh solid black;
+    width: 15vw;
+    height: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.5vh;
+    background-color: rgb(255, 255, 255);
+}
+
+#winner-panel-title {
+    width: 15vw;
+    height: 5vh;
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.1vh solid black;
+    border-top-left-radius: 0.5vh;
+    border-top-right-radius: 0.5vh;
+    background-color: rgb(0, 192, 58);
+}
+
+.winner-player-information {
+    width: 15vw;
+    height: 10vh;
+    font-size: 2vh;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color:rgb(0, 0, 0);
+}
+
+#player-name,
+#player-score {
+    width: 14vw;
+}

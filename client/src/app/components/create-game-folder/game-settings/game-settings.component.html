@@ -1,0 +1,46 @@
+<div id="title">
+    <p>Configuration des paramètres de la partie</p>
+</div>
+<div id="game-settings-content">
+    <app-name-validator [isMultiplayerModeSelected]="false" (playerNameOutput)="assignTempPlayerName($event)"></app-name-validator>
+    <div id="dictionary-container">
+        <p class="text-container">Dictionnaire</p>
+        <div id="selector-container">
+            <div>
+                <button id="title-container" class="card" (click)="updateDictionary()" [matMenuTriggerFor]="dictionaryTitle">
+                    <div id="current-dictionary">{{ currentDictionary.title + ' - ' + currentDictionary.description }}</div>
+                    <div id="arrow">▼</div>
+                </button>
+            </div>
+            <div id="dictionary-list">
+                <mat-menu id="dictionary-list" #dictionaryTitle="matMenu">
+                    <div
+                        class="menu-item"
+                        mat-menu-item
+                        *ngFor="let dictionary of dictionaryNameValidatorService.dictionaryList"
+                        (click)="getDictionaryTitle(dictionary)"
+                    >
+                        <div id="details-container">
+                            <div id="dictionary-title">{{ dictionary.title.toUpperCase() }}</div>
+                            <div id="dictionary-description">{{ dictionary.description }}</div>
+                        </div>
+                    </div>
+                </mat-menu>
+            </div>
+        </div>
+    </div>
+    <div id="timer-container">
+        <p class="text-container">Temps par tour<br />(min:sec)</p>
+        <div class="input-field" id="timer-box">
+            <button #decrementButton id="dec-button" (click)="decrementClock()">-</button>
+            <div #time id="time">1:00</div>
+            <button #incrementButton id="inc-button" (click)="incrementClock()">+</button>
+        </div>
+    </div>
+    <div id="bonus-container">
+        <p class="text-container">Bonus aléatoire</p>
+        <div id="bonus-toggle">
+            <mat-slide-toggle name="bonusToggle" (change)="toggleBonus()"></mat-slide-toggle>
+        </div>
+    </div>
+</div>

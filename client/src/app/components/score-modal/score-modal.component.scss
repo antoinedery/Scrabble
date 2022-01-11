@@ -1,0 +1,231 @@
+/***********************/
+/* GENERAL MODAL STYLE */
+/***********************/
+mat-card {
+    background-color: #292a35;
+}
+
+#modal {
+    width: 50vw;
+    height: 45vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#modal-container {
+    height: 40vh;
+    width: 50vw;
+    background-color: transparent;
+    color: white;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vw;
+}
+
+/*****************/
+/* STEPPER STYLE */
+/*****************/
+::ng-deep .mat-horizontal-stepper-header-container {
+    display: none !important;
+}
+
+::ng-deep .mat-step-header .mat-step-icon {
+    background-color: white;
+    color: gray;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected {
+    background-color: green;
+    color: white;
+}
+
+::ng-deep .mat-stepper-horizontal-line {
+    border-top-color: rgba(255, 255, 255, 0.5);
+}
+
+::ng-deep .mat-step-header .mat-step-text-label {
+    color: white;
+    font-family: 'Tahoma';
+}
+
+::ng-deep .mat-horizontal-stepper-header {
+    pointer-events: none !important;
+}
+
+::ng-deep .mat-horizontal-content-container {
+    padding: 0 !important;
+}
+
+::ng-deep .mat-dialog-container {
+    padding: 1vw !important;
+}
+
+/*****************/
+/* MODAL CONTENT */
+/*****************/
+.choice-content {
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/****************/
+/* MODAL FOOTER */
+/****************/
+#modal-footer,
+.modal-stepper-container {
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+#modal-footer {
+    margin: 1.5vh 0;
+}
+
+/****************************/
+/* CANCEL & STEPPER BUTTONS */
+/****************************/
+mat-card {
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.card {
+    height: 22.5vh;
+    width: 12.5vw;
+    font-family: 'ChunkFive';
+    font-size: 1.75vh;
+    border-width: 0.25em;
+    border-color: #d8e4f0;
+    border-radius: 0.5em;
+    border-style: solid;
+}
+
+.card:hover,
+.card-selected {
+    top: 0rem;
+}
+
+#classic:hover,
+#log2990:hover {
+    cursor: pointer;
+    font-size: 2vh;
+    margin-left: 0rem;
+    color: #ecf0f9;
+    background-color: darkgreen;
+}
+
+button {
+    background-color: #ecf0f9;
+    opacity: 1;
+    padding: 0;
+}
+
+#stepper-button {
+    width: 15vw;
+    height: 4vh;
+    margin: 0 1.25vw;
+    padding: 0;
+    font-size: 1.75vh;
+    line-height: 4vh;
+}
+
+#cancel-button {
+    width: 10vw;
+    font-size: 1.75vh;
+    height: 4vh;
+    margin: 0;
+    line-height: 4vh;
+}
+
+#cancel-button:hover,
+#stepper-button:hover {
+    background-color: lightgrey;
+}
+
+/***********SCORE**********/
+.modal-content {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
+#title-container,
+#title {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vh;
+}
+
+.score-table {
+    width: 35vw;
+    height: 20vh;
+}
+
+#header-container {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 2vh;
+    height: 3vh;
+}
+
+#table-content {
+    max-height: 20vh;
+    overflow-y: auto;
+}
+
+.leaderboard {
+    font-size: 1.85vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.header-score,
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 3vh;
+}
+
+.header-name,
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    min-height: 3vh;
+}
+
+::-webkit-scrollbar {
+    width: 0.25vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #555;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}

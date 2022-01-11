@@ -1,0 +1,71 @@
+<!-- GameMode Modal -->
+<mat-card>
+    <div id="modal">
+        <!-- Stepper -->
+        <mat-stepper id="modal-container" #stepper (keydown.enter)="$event.preventDefault()">
+            <!-- First page of stepper -->
+            <mat-step>
+                <form class="modal-content">
+                    <app-game-mode [stepper]="stepper"></app-game-mode>
+                </form>
+            </mat-step>
+
+            <!-- Second page of stepper -->
+            <mat-step>
+                <form class="modal-content">
+                    <app-game-settings *ngIf="isSoloModeChosen || isCreateMultiModeChosen"></app-game-settings>
+                    <app-find-games *ngIf="isJoinMultiModeChosen"> </app-find-games>
+                </form>
+                <!-- Previous/Next buttons -->
+                <div class="modal-stepper-container">
+                    <button mat-button matStepperPrevious class="stepper-button">&laquo; Précédent</button>
+                    <button *ngIf="isSoloModeChosen" mat-button class="stepper-button" (click)="confirmPlayerName()">Suivant &raquo;</button>
+                    <button *ngIf="isCreateMultiModeChosen" mat-button class="stepper-button" (click)="createRoom()">Suivant &raquo;</button>
+                </div>
+            </mat-step>
+
+            <!-- Third page of stepper -->
+            <mat-step>
+                <form class="modal-content">
+                    <!-- Virtual player difficulty page for create solo game mode-->
+                    <app-virtual-player-settings *ngIf="isSoloModeChosen"></app-virtual-player-settings>
+                    <!-- Waiting room page for create multiplayer game mode-->
+                    <app-waiting-room *ngIf="isCreateMultiModeChosen"></app-waiting-room>
+                    <!-- Validate Name page -->
+                    <app-both-player-name-comparator *ngIf="isJoinMultiModeChosen"></app-both-player-name-comparator>
+                </form>
+                <!-- Previous/Play buttons -->
+                <div class="modal-stepper-container">
+                    <button *ngIf="isSoloModeChosen" mat-button matStepperPrevious class="stepper-button" (click)="resetBotNames()">
+                        &laquo; Précédent
+                    </button>
+                    <button *ngIf="isCreateMultiModeChosen" mat-button matStepperPrevious class="stepper-button" (click)="endRoom()">
+                        &laquo; Précédent
+                    </button>
+                    <button *ngIf="isJoinMultiModeChosen" mat-button matStepperPrevious class="stepper-button">&laquo; Précédent</button>
+                    <button mat-button *ngIf="isSoloModeChosen" class="stepper-button" (click)="launchSoloGame()">Commencer la partie &raquo;</button>
+                    <button mat-button *ngIf="isCreateMultiModeChosen" class="stepper-button" (click)="convertToSoloGame()">
+                        Convertir la partie en solo &raquo;
+                    </button>
+                    <button mat-button *ngIf="isJoinMultiModeChosen" class="stepper-button" (click)="launchMultiGame()">
+                        Commencer la partie &raquo;
+                    </button>
+                </div>
+            </mat-step>
+
+            <mat-step>
+                <div id="deleted-dictionary">
+                    <div id="message">Erreur : Le dictionnaire choisi a été supprimé !</div>
+                </div>
+            </mat-step>
+
+        </mat-stepper>
+    </div>
+    <!-- Close Modal/Cancel Button -->
+    <div id="modal-footer">
+        <button *ngIf="isSoloModeChosen || isJoinMultiModeChosen || !isCreateMultiModeChosen" mat-button class="cancel-button" (click)="closeModal()">
+            Annuler
+        </button>
+        <button *ngIf="isCreateMultiModeChosen" mat-button class="cancel-button" (click)="closeModal()" (click)="endRoom()">Annuler</button>
+    </div>
+</mat-card>

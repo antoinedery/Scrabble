@@ -1,0 +1,87 @@
+::ng-deep .mat-dialog-container {
+    padding: 1vw !important;
+}
+
+mat-card {
+    background-color: #1f2029;
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.modal {
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.modal-content {
+    height: 47.5vh;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    line-height: 3vh;
+    font-size: 2vh;
+    color: white;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.25vh;
+}
+
+.name-validator {
+    display: flex;
+    justify-content: center;
+    height: 25vh;
+}
+
+/*******************************/
+
+button {
+    background-color: #ecf0f9;
+    opacity: 1;
+}
+
+.card {
+    cursor: pointer;
+    height: 5.5vh;
+    width: 12vw;
+    font-family: 'Tahoma';
+    font-size: 2vh;
+    border-width: 0.25em;
+    border-color: #d8e4f0;
+    border-radius: 0.5em;
+    border-style: solid;
+}
+
+.card:hover,
+.card-selected {
+    top: 0rem;
+    cursor: pointer;
+    font-size: 2.25vh;
+    color: white;
+    background-color: rgb(1, 1, 61);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: -8vh 0;
+}
+
+#upper-button-container {
+    margin: 8vh 0;
+}
+
+#close:hover {
+    background-color: rgb(204, 32, 32);
+}
+
+#confirm:hover {
+    background-color: darkgreen;
+}

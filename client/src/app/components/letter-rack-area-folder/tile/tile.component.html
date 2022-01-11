@@ -1,0 +1,11 @@
+<!-- WHOLE TILE -->
+<div #tile class="tile" id="letter{{ letterIndex }}" *ngIf="score !== -1" (click)="this.mousePlacementService.cancelPlacement()" (contextmenu)="decorateTileToChange($event)">
+    <!-- TILE'S LETTER -->
+    <div id="letter">
+        <ng-container *ngIf="letter !== '*'">{{ letter }}</ng-container>
+    </div>
+    <!-- TILE'S SCORE -->
+    <div id="letter-score">
+        <ng-container>{{ score }}</ng-container>
+    </div>
+</div>

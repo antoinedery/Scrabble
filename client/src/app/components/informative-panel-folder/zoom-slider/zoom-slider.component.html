@@ -1,0 +1,15 @@
+<span id="header">Taille du texte</span>
+<div id="slider-container">
+    <span id="minus-symbol">-</span>
+    <mat-slider
+        step="0.5"
+        min="{{ minSliderValue }}"
+        max="{{ maxSliderValue }}"
+        aria-label="units"
+        value="{{ initialSliderValue }}"
+        (input)="updateValueOnSlide($event)"
+        [thumbLabel]="false"
+    >
+    </mat-slider>
+    <span id="plus-symbol">+</span>
+</div>

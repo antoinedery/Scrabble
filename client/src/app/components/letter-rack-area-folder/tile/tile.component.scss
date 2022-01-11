@@ -1,0 +1,58 @@
+/***************/
+/* ENTIRE TILE */
+/***************/
+.tile {
+    height: 3vw;
+    width: 3vw;
+    border: 0.1vh solid black;
+    border-radius: 0.5vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(253, 192, 171);
+    margin: 0 0.5vh 0 0.5vh;
+    position: relative;
+    cursor: pointer;
+}
+
+/*****************/
+/* TILE'S LETTER */
+/*****************/
+#letter {
+    height: 3vw;
+    width: 3vw;
+    text-align: center;
+    font-size: 3.5vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+p {
+    margin: 0;
+}
+
+/****************/
+/* TILE'S SCORE */
+/****************/
+#letter-score {
+    font-size: 1.75vh;
+    position: absolute;
+    display: flex;
+    align-self: flex-end;
+    left: 2vw;
+}
+
+/***************************/
+/* SELECTED TILE DECORATOR */
+/***************************/
+.letter-selected-change {
+    bottom: 1vh;
+    box-shadow: 0 0 0.25vh 0.25vh #b80b0b;
+}
+
+.letter-selected-move {
+    bottom: 1vh;
+    box-shadow: 0 0 0.25vh 0.25vh #05039e;
+}

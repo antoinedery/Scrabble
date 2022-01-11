@@ -1,0 +1,32 @@
+<div>
+    <div id="title">Liste des dictionnaires</div>
+    <div id="page-content">
+        <div>
+            <div id="upload-container">
+                <button id="upload-button" (click)="openDialog()">Ajouter un dictionnaire</button>
+            </div>
+            <hr class="row-margin" />
+            <div id="header-container">
+                <div class="header">
+                    Nom du dictionnaire
+                </div>
+                <div class="header">
+                    Description
+                </div>
+                <div id="icon"></div>
+            </div>
+            <hr class="row-margin" />
+            <div id="table-content">
+                <app-dictionary-display
+                    *ngFor="let dictionary of dictionaryNameValidatorService.dictionaryList; let i = index"
+                    [title]="dictionary.title"
+                    [description]="dictionary.description"
+                    [index]="i"
+                >
+                </app-dictionary-display>
+            </div>
+
+            <hr class="row-margin" />
+        </div>
+    </div>
+</div>

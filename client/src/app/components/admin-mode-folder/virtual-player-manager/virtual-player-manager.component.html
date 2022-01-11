@@ -1,0 +1,41 @@
+<div>
+    <div id="title">Liste des joueurs virtuels</div>
+    <div id="page-content">
+        <div>
+            <div id="upload-container">
+                <button id="upload-button" (click)="openDialog()">Ajouter un joueur virtuel</button>
+            </div>
+            <div id="table-container">
+                <div>
+                    <hr class="row-margin" />
+                    <div id="header-container">
+                        <div class="header">
+                            Nom des joueurs débutants
+                        </div>
+                    </div>
+                    <hr class="row-margin" />
+                    <div id="table-content">
+                        <app-virtual-player-display *ngFor="let name of virtualPlayerCreatorService.beginnerVirtualPlayersNames" [name]="name" [difficulty]="'Easy'">
+                        </app-virtual-player-display>
+                    </div>
+                    <hr class="row-margin" />
+                </div>
+
+                <div>
+                    <hr class="row-margin" />
+                    <div id="header-container">
+                        <div class="header">
+                            Nom des joueurs experts
+                        </div>
+                    </div>
+                    <hr class="row-margin" />
+                    <div id="table-content">
+                        <app-virtual-player-display *ngFor="let name of virtualPlayerCreatorService.expertVirtualPlayersNames" [name]="name" [difficulty]="'Expert'">
+                        </app-virtual-player-display>
+                    </div>
+                    <hr class="row-margin" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

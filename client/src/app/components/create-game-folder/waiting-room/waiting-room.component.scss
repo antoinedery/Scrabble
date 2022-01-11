@@ -1,0 +1,53 @@
+/*****************/
+/* MODAL CONTENT */
+/*****************/
+p {
+    margin: 0;
+}
+
+#modal-content {
+    height: 40vh;
+}
+
+#waiting-container {
+    height: 40vh;
+}
+
+#waiting-text {
+    width: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Tahoma';
+}
+
+.title,
+.text {
+    width: 50vw;
+    margin: 1vh 0;
+}
+
+.title {
+    font-size: 2vh;
+    font-weight: 700;
+}
+
+.text {
+    font-size: 1.7vh;
+}
+
+/********************/
+/* PROGRESS SPINNER */
+/********************/
+
+#spinner-container {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-spinner::ng-deep circle {
+    stroke: rgb(241, 36, 163);
+}

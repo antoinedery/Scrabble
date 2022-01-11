@@ -1,0 +1,139 @@
+/***********************/
+/* GENERAL MODAL STYLE */
+/***********************/
+mat-card {
+    background-color: #292a35;
+}
+
+#modal {
+    width: 50vw;
+    height: 45vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+}
+
+#modal-container {
+    height: 40vh;
+    width: 50vw;
+    background-color: transparent;
+    color: white;
+}
+
+#deleted-dictionary {
+    height: 40vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#message {
+    height: 2vh;
+    color: white;
+    font-size: 1.85vh;
+    margin: 1vh 0;
+}
+
+/*****************/
+/* STEPPER STYLE */
+/*****************/
+::ng-deep .mat-horizontal-stepper-header-container {
+    display: none !important;
+}
+
+::ng-deep .mat-step-header .mat-step-icon {
+    background-color: white;
+    color: gray;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected {
+    background-color: green;
+    color: white;
+}
+
+::ng-deep .mat-stepper-horizontal-line {
+    border-top-color: rgba(255, 255, 255, 0.5);
+}
+
+::ng-deep .mat-step-header .mat-step-text-label {
+    color: white;
+    font-family: 'Tahoma';
+}
+
+::ng-deep .mat-horizontal-stepper-header {
+    pointer-events: none !important;
+}
+
+::ng-deep .mat-horizontal-content-container {
+    padding: 0 !important;
+}
+
+::ng-deep .mat-dialog-container {
+    padding: 1vw !important;
+}
+
+/*****************/
+/* MODAL CONTENT */
+/*****************/
+.modal-content {
+    height: 40vh;
+}
+
+/****************/
+/* MODAL FOOTER */
+/****************/
+#modal-footer,
+.modal-stepper-container {
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+#modal-footer {
+    margin: 1.5vh 0;
+}
+
+/****************************/
+/* CANCEL & STEPPER BUTTONS */
+/****************************/
+
+button {
+    background-color: #ecf0f9;
+    opacity: 1;
+    padding: 0;
+}
+
+.stepper-button {
+    width: 15vw;
+    height: 4vh;
+    margin: 0 1.25vw;
+    padding: 0;
+    font-size: 1.75vh;
+    line-height: 4vh;
+}
+
+.cancel-button {
+    width: 10vw;
+    font-size: 1.75vh;
+    height: 4vh;
+    margin: 0;
+    line-height: 4vh;
+}
+
+.stepper-button:hover,
+.cancel-button:hover {
+    background-color: lightgrey;
+}
+
+#spinner-container {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-spinner::ng-deep circle {
+    stroke: rgb(241, 36, 163);
+}

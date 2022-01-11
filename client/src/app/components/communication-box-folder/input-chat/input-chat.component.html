@@ -1,0 +1,21 @@
+<div id="input-container">
+    <input 
+        #inputBox type="text" 
+        id="input-box" 
+        autocomplete="off" 
+        placeholder="Saisir votre texte" 
+        [(ngModel)]="playerMessage" 
+        (click)="mousePlacementService.cancelPlacement()" 
+        (keydown.enter)="sendMessage()"
+    >
+    <button 
+        type="submit" 
+        id="send-btn" 
+        value="Envoyer" 
+        (ngModel)="playerMessage" 
+        (click)="mousePlacementService.cancelPlacement()" 
+        (click)="sendMessage()"
+    >
+        Envoyer
+    </button>
+</div>

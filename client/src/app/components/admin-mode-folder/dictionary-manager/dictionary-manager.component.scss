@@ -1,0 +1,99 @@
+#upload-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3vh;
+}
+
+#upload-button {
+    border: 0.1vh solid black;
+    background-color: rgb(0, 112, 192);
+    width: 11.5vw;
+    height: 5vh;
+    border-radius: 0.5vh;
+    font-size: 2vh;
+    padding: 0;
+    border-width: 0.1vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 2vh;
+    color: white;
+}
+
+#upload-input {
+    display: none;
+}
+
+#upload-button:hover {
+    background-color: rgb(0, 85, 146);
+}
+
+#title {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 3vh;
+    font-size: 2.5vh;
+}
+
+#page-content {
+    display: flex;
+    justify-content: center;
+}
+
+#header-container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 3vh;
+    margin: 1.5vh 0;
+}
+
+.header {
+    width: 25vw;
+    font-size: 1.7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+#icon {
+    width: 15vw;
+}
+
+.row-margin {
+    margin: 0;
+    border: 0.1vh solid black;
+}
+
+#table-content {
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+#empty-list {
+    margin: 1.5vh 0;
+    text-align: center;
+    font-style: italic;
+}
+
+::-webkit-scrollbar {
+    width: 0.25vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

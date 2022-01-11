@@ -1,0 +1,18 @@
+<mat-card *ngIf="clientSocketService.id !== ''">
+    <div class="modal">
+        <div class="modal-content">
+            <div class="title-container">
+                <p class="title">Êtes-vous certain de vouloir réinitialiser les données ? <br /></p>
+                <p class="title">Cette opération est irréversible et entrainera la suppression de toutes les données. <br /></p>
+            </div>
+            <div id="center-content">
+                <div class="quit-choice">
+                    <button id="no" class="card modal-button" (click)="closeModal()">Non</button>
+                    <button id="yes" class="card modal-button" (click)="confirmReset()">Oui</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card>
+
+<app-offline-server-modal *ngIf="!connectedServer || clientSocketService.id === ''"></app-offline-server-modal>

@@ -1,0 +1,99 @@
+<hr id="row-margin" *ngIf="index !== 0" />
+<div id="row-content">
+    <div class="text-container">
+        <div class="input-container">
+            <mat-icon class="icon-size icon-edit" *ngIf="isTitleSelectedToEdit" [ngStyle]="{ color: 'red' }" (click)="disableTitleEditionMode()"
+                >close</mat-icon
+            >
+            <input
+                #titleDiv
+                id="title"
+                maxlength="100"
+                placeholder="{{ title }}"
+                [(ngModel)]="title"
+                (ngModelChange)="dictionaryNameValidatorService.validateTitle(title)"
+                [readonly]="!isTitleSelectedToEdit"
+                autocomplete="off"
+            />
+            <mat-icon class="icon-size icon-edit" *ngIf="isTitleSelectedToEdit" [ngStyle]="{ color: 'green' }" (click)="confirmTitleEdit()"
+                >check</mat-icon
+            >
+        </div>
+        <div #validationTitle class="validation-container">
+            <div id="criteria-container">
+                <div *ngIf="isTitleSelectedToEdit" #criteriaValidateNameDiv id="criteria-valid-name">
+                    <p *ngIf="title && dictionaryNameValidatorService.checkTitleExist(title) && title !== previousTitle" id="identical-name">
+                        ✖ Le nom est déjà existant
+                    </p>
+                    <p *ngIf="!dictionaryNameValidatorService.titleIsValid || !title" id="invalid-name" class="center-text">✖ Le nom est invalide</p>
+                    <p
+                        *ngIf="
+                            dictionaryNameValidatorService.titleIsValid &&
+                            title &&
+                            (!dictionaryNameValidatorService.checkTitleExist(title) || title === previousTitle)
+                        "
+                        id="valid-name"
+                        class="center-text"
+                    >
+                        ✔ Le nom est valide
+                    </p>
+                    <div *ngIf="!dictionaryNameValidatorService.titleIsValid">
+                        <p class="center-text">Le nom doit satisfaire les critères suivants :</p>
+                        <p *ngIf="!dictionaryNameValidatorService.firstCharacterIsValid || !title" id="invalid-first-character" class="criteria">
+                            ✖ Avoir au moins un caractère
+                        </p>
+                        <p *ngIf="dictionaryNameValidatorService.firstCharacterIsValid && title" id="valid-first-character" class="criteria">
+                            ✔ Avoir au moins un caractère
+                        </p>
+                        <p *ngIf="!dictionaryNameValidatorService.everyTitleCharacterIsValid || !title" id="invalid-letter-number" class="criteria">
+                            ✖ Ne pas contenir un de ces caractères \ / : * ? " < > |
+                        </p>
+                        <p *ngIf="dictionaryNameValidatorService.everyTitleCharacterIsValid && title" id="valid-letter-number" class="criteria">
+                            ✔ Ne pas contenir un de ces caractères \ / : * ? " < > |
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="space"></div>
+        </div>
+    </div>
+
+    <div class="text-container">
+        <div class="input-container">
+            <mat-icon
+                class="icon-size icon-edit"
+                *ngIf="isDescriptionSelectedToEdit"
+                [ngStyle]="{ color: 'red' }"
+                (click)="disableDescriptionEditionMode()"
+                >close</mat-icon
+            >
+            <input
+                #descriptionDiv
+                id="title"
+                placeholder="{{ description }}"
+                [(ngModel)]="description"
+                [readonly]="!isDescriptionSelectedToEdit"
+                autocomplete="off"
+            />
+            <mat-icon
+                class="icon-size icon-edit"
+                *ngIf="isDescriptionSelectedToEdit"
+                [ngStyle]="{ color: 'green' }"
+                (click)="confirmDescriptionEdit()"
+                >check</mat-icon
+            >
+        </div>
+    </div>
+
+    <div class="icon-handler">
+        <a (click)="getFile()">
+            <mat-icon id="download" class="icon-size">save_alt</mat-icon>
+        </a>
+    </div>
+    <div class="icon-handler">
+        <mat-icon id="edit" class="icon-size" *ngIf="index !== 0" (click)="enableEditionMode()">edit</mat-icon>
+    </div>
+    <div class="icon-handler">
+        <mat-icon id="delete" class="icon-size" *ngIf="index !== 0" (click)="removeDictionary()">delete_forever</mat-icon>
+    </div>
+</div>

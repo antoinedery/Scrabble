@@ -1,0 +1,70 @@
+.display-container-prive {
+    height: 21.5vh;
+    width: 18vw;
+    border: 0.1vh solid black;
+    border-radius: 0.5vh;
+    background-color: white;
+
+    display: flex;
+    margin-bottom: 1vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.display-container-public {
+    height: 21.5vh;
+    width: 18vw;
+    border: 0.1vh solid black;
+    border-radius: 0.5vh;
+    background-color: white;
+
+    display: flex;
+    margin-bottom: 1vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.display-header {
+    font-size: 2vh;
+    height: 4vh;
+    background: green;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.objective-information {
+    font-size: 1.5vh;
+    width: 17.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.objective {
+    width: 17vw;
+    margin: 0.75vh 0;
+}
+
+#red {
+    color: red;
+}
+
+#green {
+    color: rgb(0, 192, 58);
+}
+
+p {
+    margin: 0;
+    line-height: 2.5vh;
+}

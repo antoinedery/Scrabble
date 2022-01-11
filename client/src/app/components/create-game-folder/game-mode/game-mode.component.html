@@ -1,0 +1,13 @@
+<div id="title">
+    <p *ngIf="!selectGameModeService.isLOG2990ModeChosen">Modes de jeux de Scrabble classique</p>
+    <p *ngIf="selectGameModeService.isLOG2990ModeChosen">Modes de jeux de Scrabble LOG2990</p>
+</div>
+<div id="modal-content">
+    <div id="game-choice">
+        <button class="card" id="solo" [ngClass]="selectedMode" (click)="selectSoloMode()">Jouer en solo</button>
+        <button class="card" id="createMulti" [ngClass]="selectedMode" (click)="selectCreateMultiMode()">Créer une partie<br />multijoueur</button>
+        <button class="card" id="joinMulti" [ngClass]="selectedMode" (click)="selectJoinMultiMode()">
+            Rejoindre une partie multijoueur
+        </button>
+    </div>
+</div>

@@ -1,0 +1,219 @@
+::ng-deep .mat-dialog-container {
+    padding: 1vw !important;
+}
+
+mat-card {
+    background-color: #1f2029;
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.modal {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+}
+
+.modal-content {
+    height: 47.5vh;
+    width: 35vw;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    line-height: 3vh;
+    font-size: 2vh;
+    color: white;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.25vh;
+}
+
+#validity-container {
+    display: flex;
+    justify-content: center;
+}
+
+#validity-criteria {
+    width: 35vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.criteria {
+    height: 2vh;
+    color: white;
+    font-size: 1.85vh;
+    margin: 1vh 0;
+}
+
+/*******************************/
+
+button,
+label {
+    background-color: #ecf0f9;
+    opacity: 1;
+}
+
+#upload-input {
+    display: none;
+}
+
+#choose-file {
+    border: 0.1vh solid black;
+    border-radius: 0.5em;
+    font-size: 2vh;
+    padding: 0;
+    border-width: 0.1vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 2vh;
+}
+
+.card {
+    cursor: pointer;
+    height: 5.5vh;
+    width: 12vw;
+    font-family: 'Tahoma';
+    font-size: 2vh;
+    border-width: 0.25em;
+    border-color: #d8e4f0;
+    border-radius: 0.5em;
+    border-style: solid;
+}
+
+#upload-button {
+    height: 5.5vh;
+    width: 22.5vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+}
+
+#upload-container {
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 3.5vh 0;
+}
+
+#file-name {
+    color: white;
+    font-size: 1.75vh;
+}
+
+#upper-button-container {
+    margin-top: 2vh;
+}
+
+#bottom-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#file-validity-container {
+    margin-top: 1.5vh;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+}
+
+#valid-file {
+    color: rgb(15, 189, 15);
+}
+
+#invalid-file {
+    color: red;
+}
+
+#close:hover,
+#choose-file:hover,
+#upload:hover {
+    background-color: rgb(206, 206, 206);
+}
+
+p {
+    margin: 0;
+}
+
+/***********************/
+/* GENERAL MODAL STYLE */
+/***********************/
+#modal-container {
+    height: 50vh;
+    width: 50vw;
+    background-color: transparent;
+    color: white;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vw;
+}
+
+/*****************/
+/* STEPPER STYLE */
+/*****************/
+::ng-deep .mat-horizontal-stepper-header-container {
+    display: none !important;
+}
+
+::ng-deep .mat-step-header .mat-step-icon {
+    background-color: white;
+    color: gray;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected {
+    background-color: green;
+    color: white;
+}
+
+::ng-deep .mat-stepper-horizontal-line {
+    border-top-color: rgba(255, 255, 255, 0.5);
+}
+
+::ng-deep .mat-step-header .mat-step-text-label {
+    color: white;
+    font-family: 'Tahoma';
+}
+
+::ng-deep .mat-horizontal-stepper-header {
+    pointer-events: none !important;
+}
+
+::ng-deep .mat-horizontal-content-container {
+    padding: 0 !important;
+}
+
+::ng-deep .mat-dialog-container {
+    padding: 1vw !important;
+}
+
+.upload-success {
+    height: 40vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    height: 2vh;
+    color: white;
+    font-size: 1.85vh;
+    margin: 1vh 0;
+}

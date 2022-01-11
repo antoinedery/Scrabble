@@ -1,0 +1,15 @@
+<mat-card>
+    <div class="modal">
+        <div class="modal-content">
+            <div class="title-container">
+                <p class="title">Êtes-vous certain de vouloir retourner au menu principal ? <br /></p>
+            </div>
+            <div id="center-content">
+                <div class="quit-choice">
+                    <button id="no" class="card modal-button" (click)="closeModal()">Non</button>
+                    <button id="yes" class="card modal-button" routerLink="/home" (click)="leaveMultiGame()">Oui</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card>

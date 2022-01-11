@@ -1,0 +1,44 @@
+#input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 18vw;
+}
+
+#input-box {
+    width: 11.5vw;
+    height: 3vh;
+}
+
+#send-btn {
+    width: 5vw;
+    height: 5vh;
+}
+
+input {
+    border: none;
+    padding: 1vh 0.5vw;
+    font-size: 1.5vh;
+    border-radius: 0.75vh;
+    resize: none;
+    margin: 0;
+    outline: none;
+    border: 0.2vh solid grey;
+}
+
+button {
+    color: white;
+    font-size: 1.5vh;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-family: 'tahoma';
+    background-color: rgb(0, 112, 192);
+    border-radius: 0.5vh;
+    padding: 0.5vh;
+}
+
+button:hover {
+    background-color: rgb(0, 85, 146);
+    cursor: pointer;
+}

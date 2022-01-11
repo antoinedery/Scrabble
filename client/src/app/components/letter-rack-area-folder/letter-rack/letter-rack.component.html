@@ -1,0 +1,18 @@
+<!-- LETTER RACK WITH SEVEN TILES -->
+<div id="letter-rack" #letterRack>
+    <app-tile
+        class="tiles"
+        *ngFor="let item of lettersList; let i = index"
+        [letter]="item.letter"
+        [score]="item.score"
+        [letterIndex]="i"
+        (click)="selectTileToMove(item.letter, i)"
+        (contextmenu)="cancelSelectionsToMove()"
+    ></app-tile>
+</div>
+
+<!-- BUTTONS TO CHANGE LETTERS (DISPLAYED ON MOUSE RIGHT-CLICK) -->
+<div class="change-letters-btn" *ngIf="showButtons">
+    <button id="cancel-btn" (click)="cancelAllSelections()">Annuler</button>
+    <button #changeBtn id="change-btn" (click)="selectGameMode()">Échanger</button>
+</div>

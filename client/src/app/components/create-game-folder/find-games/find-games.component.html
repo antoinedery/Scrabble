@@ -1,0 +1,36 @@
+<div id="title"><p>Rejoindre une partie multijoueur</p></div>
+<div class="waiting-zone-wrapper">
+    <div class="created-games">
+        <div class="created-games-information">
+            <table>
+                <tr>
+                    <th class="each-information">Nom de l'hôte</th>
+                    <th class="each-information">Minuterie</th>
+                    <th class="each-information">Dictionnaire</th>
+                    <th class="each-information">Bonus aléatoire</th>
+                    <th class="each-information">
+                        <button class="randomGameButton" [hidden]="waitingGames.length < 1" [disabled]="waitingGames.length < 2" (click)="joinGame()">
+                            Partie Aléatoire
+                        </button>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <div class="waiting-players">
+            <div class="noGameFound" *ngIf="!waitingGames.length">
+                <p>Aucune partie multijoueur trouvée</p>
+            </div>
+            <div *ngIf="waitingGames.length">
+                <app-waiting-player
+                    *ngFor="let item of waitingGames"
+                    [playerName]="item.playerName"
+                    [timer]="item.timer"
+                    [dictionary]="item.dictionary"
+                    [bonus]="item.bonus"
+                    [socketId]="item.socketId"
+                    [isLog2990ModeChosen]="item.isLog2990ModeChosen"
+                ></app-waiting-player>
+            </div>
+        </div>
+    </div>
+</div>

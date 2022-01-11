@@ -1,0 +1,23 @@
+<div id="player1-panel" [ngClass]="{ 'players-panel-border': playerTurnToPlay === true }">
+    <div id="player1-panel-name">
+        <p>{{ currentPlayerName }}</p>
+    </div>
+    <div class="player-panel-information">
+        <p class="score">Pointage : {{ playerScore }}</p>
+        <p class="remainingLetters" *ngIf="reserveRemainingLetters === 0 && playerRemainingLetters < 7">
+            Lettres restantes : {{ playerRemainingLetters }}
+        </p>
+    </div>
+</div>
+
+<div id="player2-panel" [ngClass]="{ 'players-panel-border': opponentTurnToPlay === true }">
+    <div id="player2-panel-name">
+        <p>{{ opponentPlayerName }}</p>
+    </div>
+    <div class="player-panel-information">
+        <p class="score">Pointage : {{ opponentScore }}</p>
+        <p class="remainingLetters" *ngIf="reserveRemainingLetters === 0 && opponentRemainingLetters < 7">
+            Lettres restantes : {{ opponentRemainingLetters }}
+        </p>
+    </div>
+</div>

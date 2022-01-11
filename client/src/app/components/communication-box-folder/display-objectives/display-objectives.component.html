@@ -1,0 +1,22 @@
+<div class="display-container-prive">
+    <div class="display-header">
+        <div class="title">Objectif privé</div>
+    </div>
+    <div class="objective-information">
+        <div *ngFor="let objective of this.privatePlayerObjective" class="objective">
+            <p id="red" *ngIf="!objective.fullfilled"> {{ objective.description }} (+ {{ objective.score }} points) ✖ </p>
+            <p id="green" *ngIf="objective.fullfilled"> {{ objective.description }} (+ {{ objective.score }} points) ✔ </p>
+        </div>
+    </div>
+</div>
+<div class="display-container-public">
+    <div class="display-header">
+        <div class="title">Objectifs public</div>
+    </div>
+    <div class="objective-information">
+        <div *ngFor="let objective of this.publicObjectives" class="objective">
+            <p id="red" *ngIf="!objective.fullfilled">{{ objective.description }} (+ {{ objective.score }} points) ✖</p>
+            <p id="green" *ngIf="objective.fullfilled">{{ objective.description }} (+ {{ objective.score }} points) ✔</p>
+        </div>
+    </div>
+</div>

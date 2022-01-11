@@ -1,0 +1,36 @@
+<div id="display-container" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+    <div *ngFor="let message of messagesList">
+        <div class="message-container" *ngIf="message.userName === currentPlayerName">
+            <div class="message-title-current">
+                &nbsp; &nbsp; <span class="message-data-name">{{ currentPlayerName }}</span>
+                <i class="fa fa-circle me"></i>
+            </div>
+            <div id="text-container-current">
+                <li class="message-content" id="current-player-message">
+                    <div class="message">
+                        <span>{{ message.text }}</span>
+                    </div>
+                </li>
+            </div>
+        </div>
+        <div class="message-container" *ngIf="message.userName === opponentPlayerName">
+            <div class="message-title-other">
+                <span class="message-data-name">{{ opponentPlayerName }}</span> <i class="fa fa-circle me"></i>&nbsp;
+            </div>
+            <div id="text-container-other">
+                <li class="message-content" id="other-player-message">
+                    <div class="message">
+                        <span>{{ message.text }}</span>
+                    </div>
+                </li>
+            </div>
+        </div>
+
+        <div id="message-system-container" *ngIf="message.userName === 'system'">
+            <span>{{ message.text }}</span>
+        </div>
+        <div id="message-help-container" *ngIf="message.userName === 'help'">
+            <span>{{ message.text }}</span>
+        </div>
+    </div>
+</div>

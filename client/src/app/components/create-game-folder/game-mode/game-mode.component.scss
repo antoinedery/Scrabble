@@ -1,0 +1,77 @@
+/***************/
+/* MODAL TITLE */
+/***************/
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Tahoma';
+    font-size: 2vh;
+    font-weight: 700;
+    height: 5vh;
+}
+
+/*****************/
+/* MODAL CONTENT */
+/*****************/
+#modal-content {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+p {
+    margin: 0;
+}
+
+#game-choice {
+    display: flex;
+    height: 22.5vh;
+    width: 45vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*******************/
+/* GAME MODE CARD  */
+/*******************/
+mat-card {
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.card {
+    height: 22.5vh;
+    width: 12.5vw;
+    font-family: 'ChunkFive';
+    font-size: 1.75vh;
+    border-width: 0.25em;
+    border-color: #d8e4f0;
+    border-radius: 0.5em;
+    border-style: solid;
+}
+
+.card:hover,
+.card-selected {
+    top: 0rem;
+}
+
+#solo:hover,
+#createMulti:hover,
+#joinMulti:hover {
+    cursor: pointer;
+    font-size: 2vh;
+    margin-left: 0rem;
+    color: #ecf0f9;
+    background-color: darkgreen;
+}
+
+button {
+    background-color: #ecf0f9;
+    opacity: 1;
+    padding: 0;
+}

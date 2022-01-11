@@ -1,0 +1,102 @@
+/***************/
+/* MODAL TITLE */
+/***************/
+
+#title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Tahoma';
+    font-size: 2vh;
+    font-weight: 700;
+    height: 2.5vh;
+}
+
+/***********************/
+/* GENERAL MODAL STYLE */
+/***********************/
+
+#virtual-player-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 32.5vh;
+    justify-content: center;
+}
+
+#virtual-player-level {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/**********************************/
+/* VIRTUAL PLAYER'S LEVEL BUTTONS */
+/**********************************/
+
+.card {
+    cursor: pointer;
+    height: 17.5vh;
+    width: 12.5vw;
+    font-family: 'ChunkFive';
+    font-size: 1.75vh;
+    border-width: 0.25em;
+    border-color: #d8e4f0;
+    border-radius: 0.5em;
+    border-style: solid;
+}
+
+button {
+    background-color: #ecf0f9;
+    opacity: 1;
+}
+
+#beginner,
+#expert {
+    margin: 0 2.5vh;
+}
+
+.card:hover,
+.card-selected {
+    top: 0rem;
+}
+
+.card:hover,
+.card-selected {
+    cursor: pointer;
+    font-size: 2vh;
+    color: #ecf0f9;
+    background-color: darkgreen;
+}
+
+#beginner:hover,
+#expert:hover {
+    font-size: 2vh;
+    color: #ecf0f9;
+    background-color: darkgreen;
+}
+
+
+/*************************/
+/* VIRTUAL PLAYER'S NAME */
+/*************************/
+
+#virtual-player-name-container {
+    display: none;
+    height: 2vh;
+    width: 100%;
+    justify-content: center;
+    color: white;
+    font-family: 'Tahoma';
+    font-size: 2vh;
+}
+
+#virtual-player-name {
+    height: 2vh;
+    line-height: 100%;
+}

@@ -1,0 +1,39 @@
+<div class="waiting-player">
+    <div id="game-option">
+        <div id="player-name-cell">
+            <div id="player-name">
+                {{ playerName }}
+            </div>
+        </div>
+
+        <div id="timer-cell">
+            <div id="timer">{{ timer.minute }}:{{ timer.second | number: '2.0-0' }}</div>
+        </div>
+
+        <div id="dictionary-cell">
+            <div id="dictionary">
+                {{ dictionary.title }}
+            </div>
+        </div>
+
+        <div id="bonus-cell">
+            <div id="bonus">
+                <p *ngIf="bonus">Activé</p>
+                <p *ngIf="!bonus">Désactivé</p>
+            </div>
+        </div>
+    </div>
+    <div id="join-cell">
+        <button id="join" (click)="joinGame()">
+            <span aria-hidden="true">R</span>
+            <span aria-hidden="true">E</span>
+            <span aria-hidden="true">J</span>
+            <span aria-hidden="true">O</span>
+            <span aria-hidden="true">I</span>
+            <span aria-hidden="true">N</span>
+            <span aria-hidden="true">D</span>
+            <span aria-hidden="true">R</span>
+            <span aria-hidden="true">E</span>
+        </button>
+    </div>
+</div>

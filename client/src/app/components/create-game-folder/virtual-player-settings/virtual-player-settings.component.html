@@ -1,0 +1,12 @@
+<div id="title">
+    <p>Configuration des paramètres du joueur adverse</p>
+</div>
+<div id="virtual-player-container">
+    <div id="virtual-player-level">
+        <button class="card" id="beginner" (click)="selectBotDifficulty(1)" [ngClass]="beginnerSelection">Joueur débutant</button>
+        <button class="card" id="expert" (click)="selectBotDifficulty(2)" [ngClass]="expertSelection">Joueur expert</button>
+    </div>
+    <div #virtualPlayerName id="virtual-player-name-container">
+        <p class="virtual-player-name">Nom de l'adversaire : {{ botName }}</p>
+    </div>
+</div>

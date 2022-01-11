@@ -1,0 +1,50 @@
+#title {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 3vh;
+    font-size: 2.5vh;
+}
+
+#page-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 3vw;
+}
+
+#reset-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3vw;
+}
+
+#reset-button {
+    border: 0.1vh solid black;
+    background-color: rgb(0, 112, 192);
+    width: 11.5vw;
+    height: 5vh;
+    border-radius: 0.5vh;
+    font-size: 2vh;
+    padding: 0;
+    border-width: 0.1vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 2vh;
+    color: white;
+}
+
+#reset-button:hover {
+    background-color: rgb(0, 85, 146);
+}
+
+.margin-setter {
+    margin-left: 2vw;
+}
+
+p {
+    margin: 1vh 0;
+    color: black;
+    font-size: 2vh;
+}

@@ -1,0 +1,83 @@
+.waiting-player {
+    background: linear-gradient(0deg, rgba(201, 47, 47, 1) 24%, rgba(246, 174, 174, 1) 80%);
+    height: 5vh;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    border-width: 0.25vh;
+    border-color: #50515c;
+    border-radius: 1.25vh;
+    border-style: solid;
+    margin: 0.25vh 0;
+    color: black;
+    font-family: 'Tahoma';
+    font-size: 1.7vh;
+}
+
+#game-option {
+    display: flex;
+    justify-content: space-evenly;
+    width: 32.8vw;
+}
+
+#player-name-cell,
+#timer-cell,
+#dictionary-cell,
+#bonus-cell {
+    width: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 0.2vw;
+}
+
+#join-cell {
+    width: 7.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#join {
+    border-width: 0.5vh;
+    border-color: white;
+    border-radius: 2.5vh;
+    background-color: green;
+    color: white;
+    height: 3.75vh;
+    width: max-content;
+}
+
+span {
+    font-size: 1.4vh;
+    position: relative;
+    animation: scatter 1.75s infinite;
+}
+
+span:nth-child(2n) {
+    animation-delay: 0.25s;
+}
+
+span:nth-child(3n) {
+    animation-delay: 0.5s;
+}
+
+span:nth-child(4n) {
+    animation-delay: 0.75s;
+}
+
+@keyframes scatter {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: -3px;
+    }
+    100% {
+        top: 2px;
+    }
+}
+
+p {
+    margin: 0;
+}

@@ -1,0 +1,9 @@
+<div class="side-bar-container">
+    <app-display-objectives [style.display]="this.selectGameModeService.isLOG2990ModeChosen ? 'block' : 'none'"></app-display-objectives>
+    <div [ngClass]="this.selectGameModeService.isLOG2990ModeChosen ? 'chat-box-container-log1990-mode' : 'chat-box-container-classic-mode'">
+        <app-display-chat (mouseenter)="setMouseEventReceiverOnFocusIn()" (mouseleave)="setMouseEventReceiverOnFocusOut()"></app-display-chat>
+    </div>
+    <div class="input-box-container">
+        <app-input-chat></app-input-chat>
+    </div>
+</div>

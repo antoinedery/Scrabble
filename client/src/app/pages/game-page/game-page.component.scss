@@ -1,0 +1,55 @@
+#container {
+    display: flex;
+    overflow: auto;
+    justify-content: center;
+    height: 100vh;
+}
+
+#informative-panel {
+    width: 20vw;
+}
+
+#middle-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60vw;
+    overflow: none;
+    background-color: lightcyan;
+}
+
+#play-area-container {
+    width: 60vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+#letter-rack-area-container {
+    width: 60vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+}
+
+#letter-rack {
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(243, 243, 243);
+    border-top: 0.1vh solid black;
+}
+
+#communication-box {
+    width: 20vw;
+    height: 98vh;
+    padding: 2vh 0 0 0;
+    border-left: 0.1vh solid black;
+    background-color: rgb(214, 214, 214);
+}
+
+#game-board:focus {
+    outline: none;
+}

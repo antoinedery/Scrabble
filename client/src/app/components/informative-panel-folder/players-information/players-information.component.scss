@@ -1,0 +1,69 @@
+p {
+    margin: 0;
+    font-family: 'tahoma';
+}
+
+#player1-panel,
+#player2-panel {
+    border: 0.1vh solid black;
+    width: 15vw;
+    height: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 0.5vh;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    opacity: 0.55;
+}
+
+#player1-panel {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.players-panel-border {
+    outline: none;
+    box-shadow: 0 0 2vh 1vh green;
+    opacity: 1 !important;
+}
+
+#player1-panel-name,
+#player2-panel-name {
+    width: 15vw;
+    height: 5vh;
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.1vh solid black;
+    border-top-left-radius: 0.5vh;
+    border-top-right-radius: 0.5vh;
+}
+
+#player1-panel-name {
+    background-color: rgb(192, 0, 0);
+}
+
+#player2-panel-name {
+    background-color: rgb(0, 112, 192);
+}
+
+.player-panel-information {
+    width: 15vw;
+    height: 10vh;
+    font-size: 2vh;
+    text-align: start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+
+.score,
+.remainingLetters {
+    width: 14vw;
+}

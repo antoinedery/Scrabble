@@ -1,0 +1,11 @@
+<div #winnerPanelContainer id="winner-panel-container">
+    <div id="winner-panel">
+        <div id="winner-panel-title">
+            <p>Partie terminée</p>
+        </div>
+        <div class="winner-player-information">
+            <p *ngIf="winnerPlayerName === 'equal'">{{ playerName }} et {{ opponentPlayerName }} ont terminé à égalité. Félicitations !</p>
+            <p *ngIf="winnerPlayerName !== 'equal'">Le gagnant est {{ winnerPlayerName }}. Félicitations !</p>
+        </div>
+    </div>
+</div>

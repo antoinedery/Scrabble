@@ -1,0 +1,64 @@
+<hr id="row-margin" />
+<div id="row-content">
+    <div class="name-container">
+        <mat-icon class="icon-size icon-edit" *ngIf="isSelectedToEdit" [ngStyle]="{ color: 'red' }" (click)="disableEditionMode()">close</mat-icon>
+        <input
+            #nameDiv
+            id="name"
+            maxlength="20"
+            placeholder="{{ name }}"
+            [(ngModel)]="name"
+            (ngModelChange)="nameValidatorService.validatePlayerName(name)"
+            [readonly]="!isSelectedToEdit"
+            autocomplete="off"
+        />
+        <mat-icon class="icon-size icon-edit" *ngIf="isSelectedToEdit" [ngStyle]="{ color: 'green' }" (click)="confirmEdit()">check</mat-icon>
+    </div>
+    <div class="icon-handler">
+        <mat-icon id="edit" class="icon-size" *ngIf="!checkDefaultName(name)" (click)="enableEditionMode()">edit</mat-icon>
+    </div>
+    <div class="icon-handler">
+        <mat-icon id="delete" class="icon-size" *ngIf="!checkDefaultName(name)" (click)="removePlayer()">delete_forever</mat-icon>
+    </div>
+</div>
+<div #validation id="text-container">
+    <div id="criteria-container">
+        <div *ngIf="isSelectedToEdit" #criteriaValidateNameDiv id="criteria-valid-name">
+            <p *ngIf="name && virtualPlayerCreatorService.checkNameExist(name) && name !== previousName" id="identical-name">
+                ✖ Le nom est déjà existant
+            </p>
+            <p *ngIf="!nameValidatorService.playerNameIsValid || !name" id="invalid-name" class="center-text">✖ Le nom est invalide</p>
+            <p
+                *ngIf="nameValidatorService.playerNameIsValid && name && (!virtualPlayerCreatorService.checkNameExist(name) || name === previousName)"
+                id="valid-name"
+                class="center-text"
+            >
+                ✔ Le nom est valide
+            </p>
+            <div *ngIf="!nameValidatorService.playerNameIsValid">
+                <p class="center-text">Le nom doit satisfaire les critères suivants :</p>
+                <p *ngIf="!nameValidatorService.playerFirstCharacterIsValid || !name" id="invalid-first-character" class="criteria">
+                    ✖ Débuter par une lettre
+                </p>
+                <p *ngIf="nameValidatorService.playerFirstCharacterIsValid && name" id="valid-first-character" class="criteria">
+                    ✔ Débuter par une lettre
+                </p>
+
+                <p *ngIf="!nameValidatorService.playerNameLengthIsValid || !name" id="invalid-length" class="criteria">
+                    ✖ Contenir entre 2 et 20 caractères
+                </p>
+                <p *ngIf="nameValidatorService.playerNameLengthIsValid && name" id="valid-length" class="criteria">
+                    ✔ Contenir entre 2 et 20 caractères
+                </p>
+
+                <p *ngIf="!nameValidatorService.playerEveryCharacterIsValid || !name" id="invalid-letter-number" class="criteria">
+                    ✖ Contenir que des lettres et des nombres
+                </p>
+                <p *ngIf="nameValidatorService.playerEveryCharacterIsValid && name" id="valid-letter-number" class="criteria">
+                    ✔ Contenir que des lettres et des nombres
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="space"></div>
+</div>

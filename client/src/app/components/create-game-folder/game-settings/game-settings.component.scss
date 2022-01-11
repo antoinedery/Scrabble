@@ -1,0 +1,211 @@
+/***********************/
+/* GENERAL MODAL STYLE */
+/***********************/
+
+#game-settings-content {
+    display: flex;
+    height: 40vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Tahoma';
+    font-size: 2vh;
+    font-weight: 700;
+    height: 1vh;
+}
+
+#dictionary-container,
+#timer-container,
+#bonus-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 35vw;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 2.5vh;
+}
+
+.text-container {
+    width: 12.5vw;
+    font-size: 1.75vh;
+    text-align: center;
+    line-height: 100%;
+}
+
+p {
+    margin: 0;
+    line-height: 125%;
+}
+
+/*******************/
+/* INPUT BOX STYLE */
+/*******************/
+
+.settings-input-box {
+    outline: none;
+    font-family: 'Tahoma';
+    height: 4vh;
+    padding: 0.25vh;
+    font-size: 2vh;
+    width: 12.5vw;
+    border-radius: 0.5vw;
+    text-align: center;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+input[type='number']:disabled {
+    background: rgb(190, 189, 189);
+}
+
+.input-field,
+#selector-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 17.5vw;
+}
+
+/*******************/
+/* TIMER BOX STYLE */
+/*******************/
+
+#timer-box {
+    font-family: 'Tahoma';
+    height: 4vh;
+    background-color: white;
+    border-radius: 0.5vw;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    font-size: 2vh;
+}
+
+#dec-button,
+#inc-button {
+    height: 4vh;
+    cursor: pointer;
+    border: none;
+    background-color: lightgrey;
+}
+
+#dec-button:hover,
+#inc-button:hover {
+    background-color: rgb(160, 160, 160);
+}
+
+#dec-button {
+    border-top-left-radius: 0.5vw;
+    border-bottom-left-radius: 0.5vw;
+}
+
+#inc-button {
+    border-top-right-radius: 0.5vw;
+    border-bottom-right-radius: 0.5vw;
+}
+
+/************************/
+/* BONUS TOGGLE */
+/************************/
+
+#bonus-toggle {
+    width: 17.5vw;
+    display: flex;
+    justify-content: center;
+}
+
+:host ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: green;
+}
+
+:host ::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: green;
+}
+
+/**************/
+/* DICTIONARY */
+/**************/
+#title-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#title-container:hover {
+    background-color: lightgrey;
+}
+
+#current-dictionary {
+    width: 15.5vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#arrow {
+    width: 2vw;
+}
+
+.card {
+    cursor: pointer;
+    height: 4vh;
+    padding: 0.25vh;
+    width: 17.5vw;
+    font-family: 'Tahoma';
+    font-size: 1.65vh;
+    border-width: 0.25vh;
+    border-color: #d8e4f0;
+    border-radius: 0.5vw;
+    border-style: solid;
+}
+
+#details-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#dictionary-title,
+#dictionary-description {
+    width: 7.5vw;
+    font-size: 1.4vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#dictionary-title {
+    font-weight: bold;
+}
+
+::ng-deep.mat-menu-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17.5vw !important;
+    max-width: 17.5vw !important;
+    margin: 0;
+    overflow-x: hidden !important;
+}
+
+::ng-deep.mat-menu-item {
+    display: flex !important;
+    align-items: center !important;
+    width: 15vw !important;
+    height: 5vh !important;
+    max-width: 15vw !important;
+    color: black;
+    margin: 0;
+    line-height: 125% !important;
+}
+
+::ng-deep.menu-item:hover {
+    background-color: rgb(182, 182, 182) !important;
+}

@@ -1,0 +1,86 @@
+<!-- GameMode Modal -->
+<mat-card>
+    <div id="modal">
+        <!-- Stepper -->
+        <mat-stepper id="modal-container" #stepper (keydown.enter)="$event.preventDefault()">
+            <!-- First page of stepper -->
+            <mat-step>
+                <form class="choice-content">
+                    <div id="button-container">
+                        <!-- gettop5('Classic')-->
+                        <button class="card" id="classic" (click)="setMode(true)">Mode classique</button>
+                        <!-- gettop5('Log2990')-->
+                        <button class="card" id="log2990" (click)="setMode(false)">Mode LOG2990</button>
+                    </div>
+                </form>
+            </mat-step>
+
+            <!-- Second page of stepper -->
+            <mat-step>
+                <div id="title-container">
+                    <div *ngIf="verifyClassic" id="title">Meilleurs scores - Mode classique</div>
+                    <div *ngIf="!verifyClassic" id="title">Meilleurs scores - Mode LOG2990</div>
+                </div>
+                <form class="modal-content">
+                    <div *ngIf="verifyClassic" class="score-table">
+                        <hr class="row-margin" />
+                        <div id="header-container">
+                            <div class="header-score">
+                                Score
+                            </div>
+                            <div class="header-name">
+                                Joueurs
+                            </div>
+                        </div>
+                        <hr class="row-margin" />
+                        <div id="table-content">
+                            <div class="leaderboard" *ngFor="let player of leaderboardService.leaderBoardClassic">
+                                <div class="score">
+                                    {{ player.score }}
+                                </div>
+                                <div class="name">
+                                    {{ player.name }}
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="row-margin" />
+                    </div>
+
+                    <div *ngIf="!verifyClassic" class="score-table">
+                        <hr class="row-margin" />
+                        <div id="header-container">
+                            <div class="header-score">
+                                Score
+                            </div>
+                            <div class="header-name">
+                                Joueurs
+                            </div>
+                        </div>
+                        <hr class="row-margin" />
+                        <div id="table-content">
+                            <div class="leaderboard" *ngFor="let player of leaderboardService.leaderBoardLog2990">
+                                <div class="score">
+                                    {{ player.score }}
+                                </div>
+                                <div class="name">
+                                    {{ player.name }}
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="row-margin" />
+                    </div>
+                </form>
+                <div class="modal-stepper-container">
+                    <button mat-button matStepperPrevious id="stepper-button">&laquo; Précédent</button>
+                </div>
+            </mat-step>
+            <!-- /GameMode Modal -->
+        </mat-stepper>
+    </div>
+    <!-- Close Modal/Cancel Button -->
+    <div id="modal-footer">
+        <button id="cancel-button" mat-button (click)="closeModal()">
+            Annuler
+        </button>
+    </div>
+</mat-card>

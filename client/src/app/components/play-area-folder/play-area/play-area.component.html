@@ -1,0 +1,6 @@
+<div id="tempContainer">
+    <div id="canvas-container">
+        <canvas id="headerCanvas" #headerCanvas [attr.width]="width + 25" [attr.height]="height + 25"></canvas>
+        <canvas id="previewCanvas" #previewCanvas #baseCanvas (click)="onMouseClick($event)" [attr.width]="width" [attr.height]="height"></canvas>
+    </div>
+</div>

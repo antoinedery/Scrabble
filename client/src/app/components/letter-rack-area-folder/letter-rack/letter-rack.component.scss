@@ -1,0 +1,56 @@
+/***************/
+/* LETTER RACK */
+/***************/
+#letter-rack {
+    border-style: solid;
+    border-color: black;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    background-color: white;
+    border-radius: 2vh;
+    z-index: 1;
+}
+
+/*************************/
+/* CHANGE LETTER BUTTONS */
+/*************************/
+.change-letters-btn {
+    width: 12vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#cancel-btn,
+#change-btn {
+    color: white;
+    font-family: 'tahoma';
+    border-radius: 0.5vh;
+    font-size: 1.75vh;
+    height: 3.5vh;
+    width: 10vh;
+    outline: none;
+    cursor: pointer;
+}
+
+#change-btn {
+    background-color: rgb(0, 112, 192);
+    cursor: pointer;
+}
+
+#change-btn:hover {
+    background-color: rgb(0, 85, 146);
+}
+
+#cancel-btn {
+    background-color: rgb(202, 0, 0);
+    cursor: pointer;
+}
+
+#cancel-btn:hover {
+    background-color: rgb(139, 3, 3);
+}

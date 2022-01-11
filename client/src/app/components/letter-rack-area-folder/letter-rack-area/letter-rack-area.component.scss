@@ -1,0 +1,49 @@
+/************************/
+/* LETTER RACK (CENTER) */
+/************************/
+#letter-rack-container {
+    width: 35vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*****************************/
+/* END TURN AND PLAY BUTTONS */
+/*****************************/
+#end-turn-btn-container,
+#play-btn-container {
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+}
+
+#end-turn-btn,
+#play-btn {
+    color: white;
+    font-family: 'tahoma';
+    border-radius: 0.5vh;
+    font-size: 1.75vh;
+    height: 5vh;
+    width: 15vh;
+    outline: none;
+    cursor: pointer;
+}
+
+#end-turn-btn {
+    background-color: rgb(0, 112, 192);
+    cursor: pointer;
+}
+
+#end-turn-btn:hover {
+    background-color: rgb(0, 85, 146);
+}
+
+#play-btn {
+    background-color: rgb(0, 176, 80);
+    cursor: pointer;
+}
+
+#play-btn:hover {
+    background-color: rgb(1, 121, 55);
+}

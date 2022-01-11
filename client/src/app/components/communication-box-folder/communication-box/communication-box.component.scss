@@ -1,0 +1,21 @@
+.side-bar-container {
+    height: 98vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chat-box-container-classic-mode {
+    width: 18vw;
+    height: 82vh;
+}
+
+.chat-box-container-log1990-mode {
+    width: 18vw;
+    height: 40vh;
+    margin-top: -2.5vh;
+}
+
+.input-box-container {
+    width: 18vw;
+}

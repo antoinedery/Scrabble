@@ -1,0 +1,17 @@
+<mat-sidenav-container id="page-container">
+    <mat-sidenav id="side-container" mode="side" opened>
+        <div id="side-nav-button-container">
+            <button #dictionary class="side-nav-buttons" (click)="selectComponent(0)">Dictionnaires</button>
+            <button #virtualPlayer class="side-nav-buttons" (click)="selectComponent(1)">Joueurs virtuels</button>
+            <button #resetData class="side-nav-buttons" (click)="selectComponent(2)">Réinitialiser les données</button>
+        </div>
+        <div id="home-button">
+            <button id="quit-button" (click)="redirectHomePage()">Retour à la <br />page d'accueil</button>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content id="content-container">
+        <app-dictionary-manager *ngIf="selectedComponent === 0"></app-dictionary-manager>
+        <app-virtual-player-manager *ngIf="selectedComponent === 1"></app-virtual-player-manager>
+        <app-reset-data *ngIf="selectedComponent === 2"></app-reset-data>
+    </mat-sidenav-content>
+</mat-sidenav-container>

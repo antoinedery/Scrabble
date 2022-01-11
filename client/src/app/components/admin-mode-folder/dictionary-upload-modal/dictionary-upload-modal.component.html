@@ -1,0 +1,54 @@
+<app-offline-server-modal *ngIf="!connectedServer || clientSocketService.id === ''"></app-offline-server-modal>
+<mat-card *ngIf="connectedServer && clientSocketService.id !== ''">
+    <mat-stepper id="modal-container" #stepper (keydown.enter)="$event.preventDefault()">
+        <!-- First page of stepper -->
+        <mat-step>
+            <div class="modal">
+                <div class="modal-content">
+                    <div class="title-container">
+                        <p class="title">Ajouter un nouveau dictionnaire<br /></p>
+                    </div>
+                    <div id="validity-container">
+                        <div id="validity-criteria">
+                            <p class="criteria">
+                                - Le dictionnaire doit être un fichier en format JSON de taille inférieure à 10 MB
+                            </p>
+                            <p class="criteria">- Il doit contenir un titre, une description et une liste d'au moins 4 mots</p>
+                            <p class="criteria">- Le titre ne doit pas être déjà existant dans la liste</p>
+                            <p class="criteria">- Le titre doit contenir entre 1 et 100 caractères</p>
+                            <p class="criteria">- Les mots ne doivent contenir que des lettres</p>
+                        </div>
+                    </div>
+                    <div id="upload-container">
+                        <div id="upload-button">
+                            <label for="upload-input" id="choose-file" class="card">Choisir un fichier</label>
+                            <input id="upload-input" type="file" (change)="upload($event)" accept=".json" />
+                            <div id="file-name" *ngIf="file">{{ file[0].name }}</div>
+                        </div>
+                        <div id="file-validity-container">
+                            <div *ngIf="file && verificationIsReceived && isFileValid" id="valid-file">✔ Le fichier est valide</div>
+                            <div *ngIf="file && verificationIsReceived && !isFileValid" id="invalid-file">✖ Le fichier est invalide</div>
+                        </div>
+                    </div>
+                    <div id="bottom-container">
+                        <button id="close" class="card" (click)="closeModal()">Annuler</button>
+                        <button id="upload" class="card" (click)="confirm()">Enregistrer</button>
+                    </div>
+                </div>
+            </div>
+        </mat-step>
+
+        <mat-step>
+            <div class="upload-success" *ngIf="isUploadSuccessful">
+                <div class="message">Le dictionnaire a été téléversé avec succès.</div>
+            </div>
+
+            <div class="upload-success" *ngIf="!isUploadSuccessful">
+                <div class="message">Une erreur est survenue. Veuillez réessayer plus tard.</div>
+            </div>
+            <div id="bottom-container">
+                <button id="close" class="card" (click)="closeModal()">Fermer</button>
+            </div>
+        </mat-step>
+    </mat-stepper>
+</mat-card>
