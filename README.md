@@ -1,6 +1,6 @@
 <td><h1>Scrabble</h1></td>
 
-This Scrabble game was made as part of the Web Application Software Project course (LOG2990) at Polytechnique Montréal.
+Scrabble game made as part of the Web Application Software Project course (LOG2990) at Polytechnique Montréal.
 
 ### Prerequisites
 * Install [Node/npm](https://nodejs.org/en/download/)
