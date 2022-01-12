@@ -3,6 +3,7 @@
 Scrabble game made as part of the Web Application Software Project course (LOG2990) at Polytechnique Montréal.
 
 To visit the deployed site: [https://antoinedery.github.io/Scrabble/](https://antoinedery.github.io/Scrabble/)
+Note : the multiplayer mode might not work on this deployed version. 
 
 ### Prerequisites
 * Install [Node/npm](https://nodejs.org/en/download/)
