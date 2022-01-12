@@ -1,5 +1,7 @@
 <td><h1>Scrabble</h1></td>
 
+scrabble.antoinedery.com
+
 Scrabble game made as part of the Web Application Software Project course (LOG2990) at Polytechnique Montréal.
 
 ### Prerequisites
