@@ -1,6 +1,6 @@
 <td><h1>Scrabble</h1></td>
 
-This Scrabble game was made as part of the Web Application Software Project course (LOG2990) at Polytechnique Montréal.
+Scrabble game made as part of the Web Application Software Project course (LOG2990) at Polytechnique Montréal.
 
 ### Prerequisites
 * Install [Node/npm](https://nodejs.org/en/download/)
@@ -18,12 +18,12 @@ This Scrabble game was made as part of the Web Application Software Project cour
    ```sh
    git clone https://github.com/antoinedery/Scrabble.git
    ```
-2. Open terminal in the Scrabble/server folder
+2. Open terminal in the server folder
 3. Launch the server
    ```sh
    npm start
    ```
-4. Open another terminal in the Scrabble/client folder
+4. Open another terminal in the client folder
 5. Launch the client app
    ```sh
    npm start
