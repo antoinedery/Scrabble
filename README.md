@@ -2,7 +2,7 @@
 
 Scrabble game made as part of the Web Application Software Project course (LOG2990) at Polytechnique Montréal.
 
-To visit page deployment: [scrabble.antoinedery.com](http://scrabble.antoinedery.com)
+To visit the deployed site: [scrabble.antoinedery.com](http://scrabble.antoinedery.com)
 
 ### Prerequisites
 * Install [Node/npm](https://nodejs.org/en/download/)
